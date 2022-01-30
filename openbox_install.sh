@@ -15,9 +15,49 @@ echo "-------------------------------------------------"
 echo "          Installing additional Packages         "
 echo "-------------------------------------------------"
 PKGS=(
+'python'
+'psmisc'
+'xorg-server'
+'xorg-xrandr'
+'xorg-xprop'
+'xorg-xwininfo'
+'imagemagick'
+'ffmpeg'
+'wireless_tools'
+'openbox'
+'brightnessctl'
+'nitrogen'
+'dunst'
+'tint2'
+'lxsession'
+'rxvt-unicode-truecolor-wide-glyphs'
+'xclip'
+'scrot'
+'mpd'
+'mpc'
+'thunar'
+'thunar-archive-plugin'
+'thunar-volman'
+'ffmpegthumbnailer'
+'tumbler'
+'w3m'
+'ncmpcpp'
+'viewnior'
+'mpv'
+'pavucontrol'
+'parcellite'
+'gsimplecal'
+'neofetch'
+'htop'
+'xsettingsd'
+'xautolock'
+'obmenu-generator'
+'perl-gtk3'
+'picom-git'
+'rofi'
+'rsync'
 'mesa' # Essential Xorg First
 'xorg'
-'xorg-server'
 'xorg-apps'
 'xorg-drivers'
 'xorg-xkill'
@@ -77,7 +117,6 @@ PKGS=(
 'python-pyqt5'
 'python-pip'
 'qemu'
-'rsync'
 'snapper'
 'spectacle'
 'steam'
@@ -95,6 +134,10 @@ PKGS=(
 'winetricks'
 'xdg-user-dirs'
 'zeroconf-ioslave'
+'xfce4-power-manager'
+'inkscape'
+'nm-applet'
+'playerctl'
 )
 #installing additional packages
 for PKG in "${PKGS[@]}"; do
@@ -153,6 +196,9 @@ PKGS=(
 'ttf-meslo' # Nerdfont package
 'ttf-roboto'
 )
+
+export PATH=$PATH:~/.local/bin
+cp -r $HOME/OpenboxInstall/dotfiles/* $HOME/.config/
 
 for PKG in "${PKGS[@]}"; do
     yay -S --noconfirm $PKG

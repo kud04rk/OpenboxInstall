@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+export LC_ALL=POSIX LANG=POSIX; . "${HOME}/.owl4ce_var"
+
+type -p brightnessctl &>/dev/null || exec "$EXNOTIFY_SEND" -u low -r 16 'Install brightnessctl!'
+
+notify()
+{
+    BRIGHTNESS="$(brightnessctl i | grep -oP '\(\K[^%\)]+')"
+    if [ "$BRIGHTNESS" -eq 0 ]; then
+        icon='notification-display-brightness-off'
+    elif [ "$BRIGHTNESS" -lt 10 ]; then
+        icon='notification-display-brightness-low'
+    elif [ "$BRIGHTNESS" -lt 70 ]; then
+        icon='notification-display-brightness-medium'
+    elif [ "$BRIGHTNESS" -lt 100 ]; then
+        icon='notification-display-brightness-high'
+    else
+        icon='notification-display-brightness-full'
+    fi
+    exec "$EXNOTIFY_SEND" -r 1234 -t 700 -i "$icon" "$BRIGHTNESS " -h "int:value:${BRIGHTNESS}"
+}
+
+case ${1} in
+    up)      brightnessctl set "${BRIGHTNESS_STEPS:-5}%+" -q
+    ;;
+    down)    brightnessctl set "${BRIGHTNESS_STEPS:-5}%-" -q
+    ;;
+    optimal) brightnessctl set 25% -q
+    ;;
+esac
+
+notify
+
+exit ${?}
