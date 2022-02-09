@@ -204,12 +204,19 @@ PKGS=(
 'ttf-roboto'
 )
 
-export PATH=$PATH:~/.local/bin
-cp -r $HOME/OpenboxInstall/dotfiles/* $HOME/.config/
-
 for PKG in "${PKGS[@]}"; do
     yay -S --noconfirm $PKG
 done
+
+# export PATH=$PATH:~/.local/bin
+# cp -r $HOME/OpenboxInstall/dotfiles/* $HOME/.config/
+rsync -avxHAXP --exclude '.git*' --exclude 'LICENSE' --exclude '*.md' dotfiles/ ~/
+
+pushd ~/.icons/ && \
+    tar -xJf Papirus-Custom.tar.xz && tar -xJf Papirus-Dark-Custom.tar.xz && \
+    sudo ln -vs ~/.icons/Papirus-Custom /usr/share/icons/
+    sudo ln -vs ~/.icons/Papirus-Dark-Custom /usr/share/icons/
+popd
 
 else
 export PATH=$PATH:~/.local/bin
