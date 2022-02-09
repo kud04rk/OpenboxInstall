@@ -171,6 +171,7 @@ PKGS=(
 'zramd'
 'timeshift-bin'
 'timeshift-autosnap'
+'lightdm-webkit-theme-osmos'
 )
 
 for PKG in "${PKGS[@]}"; do
