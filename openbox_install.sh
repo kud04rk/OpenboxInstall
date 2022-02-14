@@ -66,7 +66,6 @@ PKGS=(
 'alsa-plugins' # audio plugins
 'alsa-utils' # audio utils
 'ark' # compression
-'audiocd-kio'
 'bluedevil'
 'breeze'
 'breeze-gtk'
@@ -122,7 +121,6 @@ PKGS=(
 'steam'
 'swtpm'
 'synergy'
-'systemsettings'
 'terminus-font'
 'ufw'
 'usbutils'
@@ -225,4 +223,5 @@ export PATH=$PATH:~/.local/bin
 fi
 echo "-------------------------------------------------"
 echo "    Now run the enabling_services.sh as root     "
+echo "               sudo -su root                     "
 echo "-------------------------------------------------"

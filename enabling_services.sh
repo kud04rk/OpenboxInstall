@@ -52,6 +52,7 @@ sed -i 's/^# MAX_SIZE=8192/MAX_SIZE='"${zram}"'/' /etc/default/zramd
 systemctl start grub-btrfs.path
 systemctl enable grub-btrfs.path
 systemctl enable zramd.service
+systemctl enable lightdm
 grub-mkconfig -o /boot/grub/grub.cfg
 
 
