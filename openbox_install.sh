@@ -15,46 +15,6 @@ echo "-------------------------------------------------"
 echo "          Installing additional Packages         "
 echo "-------------------------------------------------"
 PKGS=(
-'python'
-'psmisc'
-'xorg-server'
-'xorg-xrandr'
-'xorg-xprop'
-'xorg-xwininfo'
-'imagemagick'
-'ffmpeg'
-'wireless_tools'
-'openbox'
-'brightnessctl'
-'nitrogen'
-'dunst'
-'tint2'
-'lxsession'
-'rxvt-unicode-truecolor-wide-glyphs'
-'xclip'
-'scrot'
-'mpd'
-'mpc'
-'thunar'
-'thunar-archive-plugin'
-'thunar-volman'
-'ffmpegthumbnailer'
-'tumbler'
-'w3m'
-'ncmpcpp'
-'viewnior'
-'mpv'
-'pavucontrol'
-'parcellite'
-'gsimplecal'
-'neofetch'
-'htop'
-'xsettingsd'
-'xautolock'
-'obmenu-generator'
-'perl-gtk3'
-'picom-git'
-'rofi'
 'rsync'
 'mesa' # Essential Xorg First
 'xorg'
@@ -135,7 +95,6 @@ PKGS=(
 'xfce4-power-manager'
 'inkscape'
 'nm-applet'
-'playerctl'
 'lightdm'
 )
 #installing additional packages
@@ -165,13 +124,59 @@ PKGS=(
 'zramd'
 'timeshift-bin'
 'timeshift-autosnap'
-'lightdm-webkit-theme-osmos'
+'python'
+'psmisc'
+'xorg-server'
+'xorg-xrandr'
+'xorg-xprop'
+'xorg-xwininfo'
+'imagemagick'
+'ffmpeg'
+'wireless_tools'
+'openbox'
+'brightnessctl'
+'nitrogen'
+'dunst'
+'tint2'
+'lxsession'
+'rxvt-unicode-truecolor-wide-glyphs'
+'xclip'
+'scrot'
+'mpd'
+'mpc'
+'thunar'
+'thunar-archive-plugin'
+'thunar-volman'
+'ffmpegthumbnailer'
+'tumbler'
+'w3m'
+'ncmpcpp'
+'viewnior'
+'mpv'
+'pavucontrol'
+'parcellite'
+'gsimplecal'
+'neofetch'
+'htop'
+'xsettingsd'
+'xautolock'
+'obmenu-generator'
+'perl-gtk3'
+'picom-git'
+'rofi'
+'playerctl'
+'spicetify-cli'
+'geany'
+'telegram-desktop'
+#'lightdm-webkit-theme-osmos'
 )
 
 for PKG in "${PKGS[@]}"; do
     yay -S --noconfirm $PKG
 done
 
+chmod a+wr /opt/spotify
+chmod a+wr /opt/spotify/Apps -R
 
 #switching to snapper for better usefulness with btrfs
 # echo "CLONING: Timeshift"
@@ -203,15 +208,31 @@ for PKG in "${PKGS[@]}"; do
     yay -S --noconfirm $PKG
 done
 
+cd "$(dirname "$(spicetify -c)")/Themes/Dribbblish"
+mkdir -p ../../Extensions
+cp dribbblish.js ../../Extensions/.
+spicetify config extensions dribbblish.js
+spicetify config current_theme Dribbblish color_scheme mechanical
+spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
+spicetify apply
+
+git clone https://github.com/gilbertw1/telegram-nord-theme.git
+pushd $HOME/OpenboxInstall/telegram-nord-theme/ && make [THEME=telegramtheme] [BACKGROUND=tiled.png]
+popd
+
+mkdir ~/.icons/
+tar -xJf $HOME/OpenboxInstall/dotfiles/.icons/Papirus-Custom.tar.xz
+tar -xJf $HOME/OpenboxInstall/dotfiles/.icons/Papirus-Dark-Custom.tar.xz
+tar -xJf $HOME/OpenboxInstall/dotfiles/.icons/capitaine-cursors.tar.xz
+sudo ln -vs ~/.icons/Papirus-Custom /usr/share/icons/
+sudo ln -vs ~/.icons/Papirus-Dark-Custom /usr/share/icons/
+sudo ln -vs ~/.icons/capitaine-cursors /usr/share/icons/
+
 # export PATH=$PATH:~/.local/bin
 # cp -r $HOME/OpenboxInstall/dotfiles/* $HOME/.config/
-rsync -avxHAXP --exclude '.git*' --exclude 'LICENSE' --exclude '*.md' dotfiles/ ~/
+#rsync -avxHAXP --exclude '.git*' --exclude 'LICENSE' --exclude '*.md' $HOME/OpenboxInstall/dotfiles/ ~/
 
-pushd ~/.icons/ && \
-    tar -xJf Papirus-Custom.tar.xz && tar -xJf Papirus-Dark-Custom.tar.xz && \
-    sudo ln -vs ~/.icons/Papirus-Custom /usr/share/icons/
-    sudo ln -vs ~/.icons/Papirus-Dark-Custom /usr/share/icons/
-popd
+
 sudo pacman -S zsh && chsh -s $(command -v zsh) --noconfirm --needed
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
