@@ -222,7 +222,7 @@ git clone https://github.com/gilbertw1/telegram-nord-theme.git
 pushd $HOME/OpenboxInstall/telegram-nord-theme/ && make [THEME=telegramtheme] [BACKGROUND=tiled.png]
 popd
 
-mkdir ~/.icons/
+
 tar -xJf $HOME/OpenboxInstall/dotfiles/.icons/Papirus-Custom.tar.xz
 tar -xJf $HOME/OpenboxInstall/dotfiles/.icons/Papirus-Dark-Custom.tar.xz
 tar -xJf $HOME/OpenboxInstall/dotfiles/.icons/capitaine-cursors.tar.xz
@@ -230,7 +230,7 @@ sudo ln -vs ~/.icons/Papirus-Custom /usr/share/icons/
 sudo ln -vs ~/.icons/Papirus-Dark-Custom /usr/share/icons/
 sudo ln -vs ~/.icons/capitaine-cursors /usr/share/icons/
 
-ln -s ./kitty-themes/themes/crusedo.conf ~/.config/kitty/theme.conf
+ln -s ~/.kitty-themes/themes/crusedo.conf ~/.config/kitty/theme.conf
 
 # export PATH=$PATH:~/.local/bin
 # cp -r $HOME/OpenboxInstall/dotfiles/* $HOME/.config/
