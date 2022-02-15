@@ -2,7 +2,7 @@
 
 # Original: http://frexx.de/xterm-256-notes/data/colortable16.sh
 # Modified by Aaron Griffin and further by Kazuo Teramoto.
-# The last, modified by owl4ce.
+
 
 FGNAMES=(' black ' '  red  ' ' green ' ' yellow' '  blue ' 'magenta' '  cyan ' ' white ')
 BGNAMES=('   NONE' '  BLACK' '    RED' '  GREEN' ' YELLOW' '   BLUE' 'MAGENTA' '   CYAN' '  WHITE')

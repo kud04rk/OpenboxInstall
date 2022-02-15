@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-export LC_ALL=POSIX LANG=POSIX; . "${HOME}/.owl4ce_var"
+export LC_ALL=POSIX LANG=POSIX; . "${HOME}/.crusedo_var"
 
 type -p scrot &>/dev/null || exec "$EXNOTIFY_SEND" -u low -r 12 'Install scrot!'
 
@@ -11,7 +11,7 @@ type -p scrot &>/dev/null || exec "$EXNOTIFY_SEND" -u low -r 12 'Install scrot!'
         "$EXNOTIFY_SEND" -r 12 -t 750 -i "$NOTIF_SS_ICON" '' 'Processing captured image ..'
     else
         exec "$EXNOTIFY_SEND" -r 12 -t 500 -i "$NOTIF_SS_ICON" '' 'Screenshot canceled!'
-    fi # Bug discovered by owl4ce at October 01, 2021.
+    fi 
     
     for CURRENT in /tmp/*_scrot*.png; do
         CURRENT="$(grep -oP '/tmp/\K[^.png]+' <<< "$CURRENT")"

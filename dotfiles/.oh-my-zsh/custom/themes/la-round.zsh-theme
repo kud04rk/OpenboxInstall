@@ -1,8 +1,8 @@
 # Minimal Lambda-Rounded ZSH Theme.
-# Author: owl4ce
+
 # Requires Nerd Fonts for the glyphs.
 # ----------------------------------
-# https://github.com/owl4ce/dotfiles
+
 
 if [[ "$EUID" -eq 0 ]]; then
     user_symbol="%F{1}%Bλ%b%f"

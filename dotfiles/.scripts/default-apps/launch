@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-. "${HOME}/.owl4ce_var"
+. "${HOME}/.crusedo_var"
 
 R='\e[1;31m' M='\e[1;35m' W='\e[1;37m' NC='\e[0m' r='\e[0;31m'
 

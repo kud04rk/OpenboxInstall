@@ -208,6 +208,8 @@ for PKG in "${PKGS[@]}"; do
     yay -S --noconfirm $PKG
 done
 
+rsync -avxHAXP --exclude '.git*' --exclude 'LICENSE' --exclude '*.md' $HOME/OpenboxInstall/dotfiles/ ~/
+
 cd "$(dirname "$(spicetify -c)")/Themes/Dribbblish"
 mkdir -p ../../Extensions
 cp dribbblish.js ../../Extensions/.
@@ -228,9 +230,11 @@ sudo ln -vs ~/.icons/Papirus-Custom /usr/share/icons/
 sudo ln -vs ~/.icons/Papirus-Dark-Custom /usr/share/icons/
 sudo ln -vs ~/.icons/capitaine-cursors /usr/share/icons/
 
+ln -s ./kitty-themes/themes/crusedo.conf ~/.config/kitty/theme.conf
+
 # export PATH=$PATH:~/.local/bin
 # cp -r $HOME/OpenboxInstall/dotfiles/* $HOME/.config/
-#rsync -avxHAXP --exclude '.git*' --exclude 'LICENSE' --exclude '*.md' $HOME/OpenboxInstall/dotfiles/ ~/
+#
 
 
 sudo pacman -S zsh && chsh -s $(command -v zsh) --noconfirm --needed

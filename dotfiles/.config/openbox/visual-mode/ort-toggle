@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-. "${HOME}/.owl4ce_var"
+. "${HOME}/.crusedo_var"
 
 if [ -z "$CHK_MINMOD" ]; then
     killall tint2 dunst &>/dev/null

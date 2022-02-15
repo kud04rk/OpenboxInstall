@@ -149,7 +149,7 @@ NCMPCPP_ALBUMART_BACKEND="w3m"
 #                                                        [ END OF USER PREFERENCES ]
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-# owl4ce/dotfiles Global Variables                                                 #
+# crusedo_var/dotfiles Global Variables                                                 #
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Doesn't affect to all files. For example tint2rc, OB rc.xml, OBMenu perl, etc. - #
 # will use the absolute path and using "~" directly.                               #

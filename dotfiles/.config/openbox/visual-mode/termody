@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-export LC_ALL=POSIX LANG=POSIX; . "${HOME}/.owl4ce_var"
+export LC_ALL=POSIX LANG=POSIX; . "${HOME}/.crusedo_var"
 
 command -v urxvt termite &>/dev/null || exec "$EXNOTIFY_SEND" -u low -r 14 'Install rxvt-unicode/termite!'
 
-# Set the URxvt icon file (auto) and URL launcher from owl4ce_var.
+# Set the URxvt icon file (auto) and URL launcher from crusedo_var.
 sed -e "/URxvt.url-select.launcher/s|:.*|:        ${WEB_BROWSER}|" \
     -e "/URxvt.iconFile/s|:.*|:                   ${TERM_ICON}|" \
     -i "$XRESOURCES_CONFIG"

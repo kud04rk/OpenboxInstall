@@ -4,7 +4,7 @@
 # to run user-specific things.
 #
 # ---
-. "${HOME}/.owl4ce_var"
+. "${HOME}/.crusedo_var"
 
 # There was once a pulseaudio here.
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-. "${HOME}/.owl4ce_var"
+. "${HOME}/.crusedo_var"
 
 command -v urxvt ncmpcpp &>/dev/null || exit 1
 
