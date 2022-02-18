@@ -168,6 +168,7 @@ PKGS=(
 'spicetify-cli'
 'geany'
 'telegram-desktop'
+'web-greeter'
 #'lightdm-webkit-theme-osmos'
 )
 
@@ -236,8 +237,17 @@ ln -s ~/.kitty-themes/themes/crusedo.conf ~/.config/kitty/theme.conf
 # cp -r $HOME/OpenboxInstall/dotfiles/* $HOME/.config/
 #
 
+# nody greeter for lightdm theme
 
-sudo pacman -S zsh && chsh -s $(command -v zsh) --noconfirm --needed
+# git clone https://github.com/JezerM/nody-greeter.git
+# cd nody-greeter
+# npm install
+# npm run rebuild
+# npm run build
+# node make install
+
+
+pacman -S zsh && chsh -s $(command -v zsh) --noconfirm --needed
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions

@@ -44,6 +44,15 @@ pacman -S grub-btrfs --noconfirm --needed
 # grub-mkconfig -o /boot/grub/grub.cfg
 # fi
 
+
+# cp -r $HOME/OpenboxInstall/LightdmTheme /usr/share/lightdm-webkit/themes/
+
+cp -r $HOME/OpenboxInstall/LightdmTheme /usr/share/web-greeter/
+
+sed -i 's/^#greeter-session=example-gtk-gnome/greeter-session=lightdm-webkit-greeter/' /etc/lightdm/lightdm.conf
+sed -i 's/^#user-session=default/user-session=openbox/' /etc/lightdm/lightdm.conf
+
+
 echo "Enter the size of zram(MB)"
 echo "YOU CAN EDIT THIS LATER AT /etc/default/zramd"
 read zram
