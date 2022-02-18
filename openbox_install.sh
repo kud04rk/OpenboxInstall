@@ -246,6 +246,9 @@ ln -s ~/.kitty-themes/themes/crusedo.conf ~/.config/kitty/theme.conf
 # npm run build
 # node make install
 
+git clone https://github.com/smsriharsha/LightdmTheme.git
+cp -r $HOME/OpenboxInstall/LightdmTheme /usr/share/web-greeter/themes/
+
 
 pacman -S zsh && chsh -s $(command -v zsh) --noconfirm --needed
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

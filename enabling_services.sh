@@ -47,7 +47,7 @@ pacman -S grub-btrfs --noconfirm --needed
 
 # cp -r $HOME/OpenboxInstall/LightdmTheme /usr/share/lightdm-webkit/themes/
 
-cp -r $HOME/OpenboxInstall/LightdmTheme /usr/share/web-greeter/
+
 
 sed -i 's/^#greeter-session=example-gtk-gnome/greeter-session=lightdm-webkit-greeter/' /etc/lightdm/lightdm.conf
 sed -i 's/^#user-session=default/user-session=openbox/' /etc/lightdm/lightdm.conf
