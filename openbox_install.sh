@@ -122,8 +122,6 @@ PKGS=(
 'ocs-url' # install packages from websites
 'snap-pac'
 'zramd'
-'timeshift-bin'
-'timeshift-autosnap'
 'python'
 'psmisc'
 'xorg-server'
@@ -169,6 +167,8 @@ PKGS=(
 'geany'
 'telegram-desktop'
 'web-greeter'
+'timeshift-bin'
+'timeshift-autosnap'
 #'lightdm-webkit-theme-osmos'
 )
 
