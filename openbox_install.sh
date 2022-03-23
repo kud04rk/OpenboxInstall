@@ -213,7 +213,7 @@ cd web-greeter
 make install
 
 git clone https://github.com/smsriharsha/Openbox_Dotfiles.git
-rsync -avxHAXP --exclude '.git*' --exclude 'LICENSE' --exclude '*.md' $HOME/OpenboxInstall/Openbox_Dotfiles/dotfiles/ ~/
+rsync -avxHAXP --exclude '.git*' --exclude 'LICENSE' --exclude '*.md' $HOME/Openbox_Dotfiles/dotfiles/. ~/
 
 cd "$(dirname "$(spicetify -c)")/Themes/Dribbblish"
 mkdir -p ../../Extensions
@@ -228,14 +228,14 @@ pushd $HOME/OpenboxInstall/telegram-nord-theme/ && make [THEME=telegramtheme] [B
 popd
 
 
-tar -xJf $HOME/OpenboxInstall/dotfiles/.icons/Papirus-Custom.tar.xz
-tar -xJf $HOME/OpenboxInstall/dotfiles/.icons/Papirus-Dark-Custom.tar.xz
-tar -xJf $HOME/OpenboxInstall/dotfiles/.icons/capitaine-cursors.tar.xz
-sudo ln -vs ~/.icons/Papirus-Custom /usr/share/icons/
-sudo ln -vs ~/.icons/Papirus-Dark-Custom /usr/share/icons/
-sudo ln -vs ~/.icons/capitaine-cursors /usr/share/icons/
+tar -xJf $HOME/.icons/Papirus-Custom.tar.xz
+tar -xJf $HOME/.icons/Papirus-Dark-Custom.tar.xz
+tar -xvf $HOME/.icons/capitaine-cursors.tar.xz
+sudo ln -vs $HOME/.icons/Papirus-Custom /usr/share/icons/
+sudo ln -vs $HOME/.icons/Papirus-Dark-Custom /usr/share/icons/
+sudo ln -vs $HOME/.icons/capitaine-cursors /usr/share/icons/
 
-ln -s ~/.kitty-themes/themes/crusedo.conf ~/.config/kitty/theme.conf
+ln -vs $HOME/.kitty-themes/themes/crusedo.conf $HOME/.config/kitty/theme.conf
 
 # export PATH=$PATH:~/.local/bin
 # cp -r $HOME/OpenboxInstall/dotfiles/* $HOME/.config/
