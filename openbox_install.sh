@@ -166,7 +166,6 @@ PKGS=(
 'spicetify-cli'
 'geany'
 'telegram-desktop'
-'web-greeter'
 'timeshift-bin'
 'timeshift-autosnap'
 #'lightdm-webkit-theme-osmos'
@@ -209,6 +208,10 @@ for PKG in "${PKGS[@]}"; do
     yay -S --noconfirm $PKG
 done
 
+git clone https://github.com/JezerM/web-greeter.git
+cd web-greeter
+make install
+
 git clone https://github.com/smsriharsha/Openbox_Dotfiles.git
 rsync -avxHAXP --exclude '.git*' --exclude 'LICENSE' --exclude '*.md' $HOME/OpenboxInstall/Openbox_Dotfiles/dotfiles/ ~/
 
@@ -248,7 +251,7 @@ ln -s ~/.kitty-themes/themes/crusedo.conf ~/.config/kitty/theme.conf
 # node make install
 
 git clone https://github.com/smsriharsha/LightdmTheme.git
-cp -r $HOME/OpenboxInstall/LightdmTheme /usr/share/web-greeter/themes/
+cp -r $HOME/LightdmTheme /usr/share/web-greeter/themes/
 
 
 pacman -S zsh && chsh -s $(command -v zsh) --noconfirm --needed

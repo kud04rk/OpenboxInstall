@@ -49,8 +49,9 @@ pacman -S grub-btrfs --noconfirm --needed
 
 
 
-sed -i 's/^#greeter-session=example-gtk-gnome/greeter-session=lightdm-webkit-greeter/' /etc/lightdm/lightdm.conf
+sed -i 's/^#greeter-session=example-gtk-gnome/greeter-session=web-greeter/' /etc/lightdm/lightdm.conf
 sed -i 's/^#user-session=default/user-session=openbox/' /etc/lightdm/lightdm.conf
+sed -i 's/^theme=gruvbox/user-session=dracula/' /etc/lightdm/web-greeter.yml
 
 
 echo "Enter the size of zram(MB)"
