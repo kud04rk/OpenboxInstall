@@ -207,6 +207,8 @@ for PKG in "${PKGS[@]}"; do
     yay -S --noconfirm $PKG
 done
 
+pacman -U https://archive.archlinux.org/repos/2021/08/29/community/os/x86_64/rofi-1.6.1-1-x86_64.pkg.tar.zst
+
 git clone https://github.com/JezerM/web-greeter.git
 cd web-greeter
 make install
@@ -223,7 +225,7 @@ spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
 spicetify apply
 
 git clone https://github.com/gilbertw1/telegram-nord-theme.git
-pushd $HOME/OpenboxInstall/telegram-nord-theme/ && make [THEME=telegramtheme] [BACKGROUND=tiled.png]
+pushd $HOME/telegram-nord-theme/ && make [THEME=telegramtheme] [BACKGROUND=tiled.png]
 popd
 
 
