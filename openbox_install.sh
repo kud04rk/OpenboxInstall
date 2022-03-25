@@ -166,6 +166,7 @@ PKGS=(
 'spicetify-cli'
 'geany'
 'telegram-desktop'
+'nerd-fonts-complete-mono-glyphs'
 'timeshift-bin'
 'timeshift-autosnap'
 #'lightdm-webkit-theme-osmos'
