@@ -63,7 +63,6 @@ PKGS=(
 'oxygen'
 'p7zip'
 'patch'
-'picom'
 'pkgconf'
 'powerdevil'
 'powerline-fonts'
