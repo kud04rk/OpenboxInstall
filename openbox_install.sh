@@ -95,6 +95,7 @@ PKGS=(
 'inkscape'
 'nm-applet'
 'lightdm'
+'npm'
 )
 #installing additional packages
 for PKG in "${PKGS[@]}"; do
@@ -209,6 +210,8 @@ done
 
 pacman -U https://archive.archlinux.org/repos/2021/08/29/community/os/x86_64/rofi-1.6.1-1-x86_64.pkg.tar.zst
 
+npm install -g @genzyy/anime-cli
+
 git clone https://github.com/JezerM/web-greeter.git
 cd web-greeter
 make install
@@ -250,6 +253,8 @@ ln -vs $HOME/.kitty-themes/themes/crusedo.conf $HOME/.config/kitty/theme.conf
 # npm run rebuild
 # npm run build
 # node make install
+
+
 
 git clone https://github.com/smsriharsha/LightdmTheme.git
 cp -r $HOME/LightdmTheme /usr/share/web-greeter/themes/
