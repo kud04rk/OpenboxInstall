@@ -215,8 +215,9 @@ pacman -U https://archive.archlinux.org/repos/2021/08/29/community/os/x86_64/rof
 npm install -g @genzyy/anime-cli
 
 cd ~
-git clone https://github.com/JezerM/web-greeter.git
-cd web-greeter
+wget https://github.com/JezerM/web-greeter/archive/refs/tags/3.4.0.tar.gz
+tar -xvf 3.4.0.tar.gz
+cd web-greeter-3.4.0
 sudo make install
 cd ~
 
