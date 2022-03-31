@@ -177,8 +177,7 @@ for PKG in "${PKGS[@]}"; do
     yay -S --noconfirm $PKG
 done
 
-chmod a+wr /opt/spotify
-chmod a+wr /opt/spotify/Apps -R
+
 
 #switching to snapper for better usefulness with btrfs
 # echo "CLONING: Timeshift"
@@ -188,23 +187,6 @@ chmod a+wr /opt/spotify/Apps -R
 # makepkg -si --noconfirm
 # cd ~
 
-echo " Do you want to enable tap to click on the laptop"
-echo "taptoclick/no"
-read taptoclick
-if [[ ${taptoclick} =~ "taptoclick" ]]; then
-touch /etc/X11/xorg.conf.d/30-touchpad.conf
-cat > /etc/X11/xorg.conf.d/30-touchpad.conf <<EOL
-Section "InputClass"
-    Identifier "touchpad"
-    Driver "libinput"
-    MatchIsTouchpad "on"
-    Option "Tapping" "on"
-    Option "TappingButtonMap" "lmr"
-EndSection
-EOL
-else
-echo "tap to click not enabled"
-fi
 
 echo " enter the name of theme you want to install"
 echo "options (saber)"
@@ -240,14 +222,6 @@ cd ~
 git clone https://github.com/smsriharsha/Openbox_Dotfiles.git
 rsync -avxHAXP --exclude '.git*' --exclude 'LICENSE' --exclude '*.md' $HOME/Openbox_Dotfiles/dotfiles/. ~/
 
-cd "$(dirname "$(spicetify -c)")/Themes/Dribbblish"
-mkdir -p ../../Extensions
-cp dribbblish.js ../../Extensions/.
-spicetify config extensions dribbblish.js
-spicetify config current_theme Dribbblish color_scheme mechanical
-spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
-spicetify apply
-cd ~
 
 git clone https://github.com/gilbertw1/telegram-nord-theme.git
 pushd $HOME/telegram-nord-theme/ && make [THEME=telegramtheme] [BACKGROUND=tiled.png]

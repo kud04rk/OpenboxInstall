@@ -47,7 +47,35 @@ pacman -S grub-btrfs --noconfirm --needed
 
 # cp -r $HOME/OpenboxInstall/LightdmTheme /usr/share/lightdm-webkit/themes/
 
+echo " Do you want to enable tap to click on the laptop"
+echo "taptoclick/no"
+read taptoclick
+if [[ ${taptoclick} =~ "taptoclick" ]]; then
+touch /etc/X11/xorg.conf.d/30-touchpad.conf
+cat > /etc/X11/xorg.conf.d/30-touchpad.conf <<EOL
+Section "InputClass"
+    Identifier "touchpad"
+    Driver "libinput"
+    MatchIsTouchpad "on"
+    Option "Tapping" "on"
+    Option "TappingButtonMap" "lmr"
+EndSection
+EOL
+else
+echo "tap to click not enabled"
+fi
 
+chmod a+wr /opt/spotify
+chmod a+wr /opt/spotify/Apps -R
+
+cd "$(dirname "$(spicetify -c)")/Themes/Dribbblish"
+mkdir -p ../../Extensions
+cp dribbblish.js ../../Extensions/.
+spicetify config extensions dribbblish.js
+spicetify config current_theme Dribbblish color_scheme mechanical
+spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
+spicetify apply
+cd ~
 
 sed -i 's/^#greeter-session=example-gtk-gnome/greeter-session=web-greeter/' /etc/lightdm/lightdm.conf
 sed -i 's/^#user-session=default/user-session=openbox/' /etc/lightdm/lightdm.conf
