@@ -168,6 +168,7 @@ PKGS=(
 'telegram-desktop'
 'nerd-fonts-complete-mono-glyphs'
 'spotify'
+'web-greeter'
 'timeshift-bin'
 'timeshift-autosnap'
 #'lightdm-webkit-theme-osmos'
@@ -214,12 +215,13 @@ pacman -U https://archive.archlinux.org/repos/2021/08/29/community/os/x86_64/rof
 
 npm install -g @genzyy/anime-cli
 
-cd ~
-wget https://github.com/JezerM/web-greeter/archive/refs/tags/3.4.0.tar.gz
-tar -xvf 3.4.0.tar.gz
-cd web-greeter-3.4.0
-sudo make install
-cd ~
+# cd ~
+# wget https://github.com/JezerM/web-greeter/archive/refs/tags/3.4.0.tar.gz
+# tar -xvf 3.4.0.tar.gz
+# cd web-greeter-3.4.0
+# pip install -r requirements.txt
+# sudo make install
+# cd ~
 
 git clone https://github.com/smsriharsha/Openbox_Dotfiles.git
 rsync -avxHAXP --exclude '.git*' --exclude 'LICENSE' --exclude '*.md' $HOME/Openbox_Dotfiles/dotfiles/. ~/
