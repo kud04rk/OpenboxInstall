@@ -188,6 +188,24 @@ chmod a+wr /opt/spotify/Apps -R
 # makepkg -si --noconfirm
 # cd ~
 
+echo " Do you want to enable tap to click on the laptop"
+echo "taptoclick/no"
+read taptoclick
+if [[ ${taptoclick} =~ "taptoclick" ]]; then
+touch /etc/X11/xorg.conf.d/30-touchpad.conf
+cat > /etc/X11/xorg.conf.d/30-touchpad.conf <<EOL
+Section "InputClass"
+    Identifier "touchpad"
+    Driver "libinput"
+    MatchIsTouchpad "on"
+    Option "Tapping" "on"
+    Option "TappingButtonMap" "lmr"
+EndSection
+EOL
+else
+echo "tap to click not enabled"
+fi
+
 echo " enter the name of theme you want to install"
 echo "options (saber)"
 read themeinstall
@@ -262,6 +280,7 @@ ln -vs $HOME/.kitty-themes/themes/crusedo.conf $HOME/.config/kitty/theme.conf
 
 git clone https://github.com/smsriharsha/LightdmTheme.git
 cp -r $HOME/LightdmTheme /usr/share/web-greeter/themes/
+
 
 
 pacman -S zsh && chsh -s $(command -v zsh) --noconfirm --needed
