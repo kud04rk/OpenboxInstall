@@ -214,9 +214,10 @@ pacman -U https://archive.archlinux.org/repos/2021/08/29/community/os/x86_64/rof
 
 npm install -g @genzyy/anime-cli
 
+cd ~
 git clone https://github.com/JezerM/web-greeter.git
 cd web-greeter
-make install
+sudo make install
 cd ~
 
 git clone https://github.com/smsriharsha/Openbox_Dotfiles.git
