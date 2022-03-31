@@ -167,6 +167,7 @@ PKGS=(
 'geany'
 'telegram-desktop'
 'nerd-fonts-complete-mono-glyphs'
+'spotify'
 'timeshift-bin'
 'timeshift-autosnap'
 #'lightdm-webkit-theme-osmos'
@@ -216,6 +217,7 @@ npm install -g @genzyy/anime-cli
 git clone https://github.com/JezerM/web-greeter.git
 cd web-greeter
 make install
+cd ~
 
 git clone https://github.com/smsriharsha/Openbox_Dotfiles.git
 rsync -avxHAXP --exclude '.git*' --exclude 'LICENSE' --exclude '*.md' $HOME/Openbox_Dotfiles/dotfiles/. ~/
@@ -227,6 +229,7 @@ spicetify config extensions dribbblish.js
 spicetify config current_theme Dribbblish color_scheme mechanical
 spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
 spicetify apply
+cd ~
 
 git clone https://github.com/gilbertw1/telegram-nord-theme.git
 pushd $HOME/telegram-nord-theme/ && make [THEME=telegramtheme] [BACKGROUND=tiled.png]
