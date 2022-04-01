@@ -30,7 +30,6 @@ PKGS=(
 'breeze'
 'breeze-gtk'
 'bridge-utils'
-'celluloid' # video players
 'code' # Visual Studio code
 'dtc'
 'egl-wayland'
@@ -96,12 +95,22 @@ PKGS=(
 'nm-applet'
 'lightdm'
 'npm'
+'flatpak'
 )
 #installing additional packages
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
     sudo pacman -S "$PKG" --noconfirm --needed
 done
+
+
+
+echo "-------------------------------------------------"
+echo "          Installing flatpak Packages         "
+echo "-------------------------------------------------"
+
+flatpak install flathub io.github.celluloid_player.Celluloid
+
 
 
 
@@ -169,6 +178,7 @@ PKGS=(
 'nerd-fonts-complete-mono-glyphs'
 'spotify'
 'web-greeter'
+'appimagelauncher'
 'timeshift-bin'
 'timeshift-autosnap'
 #'lightdm-webkit-theme-osmos'
