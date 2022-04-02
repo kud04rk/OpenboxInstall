@@ -94,6 +94,9 @@ PKGS=(
 'inkscape'
 'nm-applet'
 'lightdm'
+'gvfs'
+'gvfs-smb'
+'gvfs-nfs'
 'npm'
 'flatpak'
 )
