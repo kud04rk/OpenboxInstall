@@ -243,7 +243,7 @@ popd
 
 tar -xJf $HOME/.icons/Papirus-Custom.tar.xz
 tar -xJf $HOME/.icons/Papirus-Dark-Custom.tar.xz
-tar -xvf $HOME/.icons/capitaine-cursors.tar.xz
+tar -xvf $HOME/.icons/capitaine-cursors.tar.gz
 sudo ln -vs $HOME/.icons/Papirus-Custom /usr/share/icons/
 sudo ln -vs $HOME/.icons/Papirus-Dark-Custom /usr/share/icons/
 sudo ln -vs $HOME/.icons/capitaine-cursors /usr/share/icons/
