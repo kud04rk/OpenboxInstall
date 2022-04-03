@@ -114,8 +114,6 @@ echo "-------------------------------------------------"
 
 flatpak install flathub io.github.celluloid_player.Celluloid
 
-flatpak install flathub com.getferdi.Ferdi
-
 flatpak install flathub org.onlyoffice.desktopeditors
 
 
