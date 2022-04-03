@@ -114,6 +114,7 @@ echo "-------------------------------------------------"
 
 flatpak install flathub io.github.celluloid_player.Celluloid
 
+flatpak install flathub com.getferdi.Ferdi
 
 
 
@@ -175,7 +176,6 @@ PKGS=(
 'playerctl'
 'spicetify-cli'
 'geany'
-'telegram-desktop'
 'nerd-fonts-complete-mono-glyphs'
 'spotify'
 'web-greeter'
@@ -237,10 +237,6 @@ cd ~
 git clone https://github.com/smsriharsha/Openbox_Dotfiles.git
 rsync -avxHAXP --exclude '.git*' --exclude 'LICENSE' --exclude '*.md' $HOME/Openbox_Dotfiles/dotfiles/. ~/
 
-
-git clone https://github.com/gilbertw1/telegram-nord-theme.git
-pushd $HOME/telegram-nord-theme/ && make [THEME=telegramtheme] [BACKGROUND=tiled.png]
-popd
 
 
 tar -xJf $HOME/.icons/Papirus-Custom.tar.xz
