@@ -234,6 +234,12 @@ cd web-greeter-3.4.0
 sudo make install
 cd ~
 
+git clone https://github.com/smsriharsha/leafpad.git
+cd leafpad
+./configure
+make
+make install-strip
+
 git clone https://github.com/smsriharsha/Openbox_Dotfiles.git
 rsync -avxHAXP --exclude '.git*' --exclude 'LICENSE' --exclude '*.md' $HOME/Openbox_Dotfiles/dotfiles/. ~/
 
