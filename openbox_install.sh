@@ -181,6 +181,7 @@ PKGS=(
 'web-greeter'
 'appimagelauncher'
 'lxappreance-obconf'
+'downgrade'
 'timeshift-bin'
 'timeshift-autosnap'
 #'lightdm-webkit-theme-osmos'
