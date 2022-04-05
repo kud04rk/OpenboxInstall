@@ -150,7 +150,6 @@ PKGS=(
 'dunst'
 'tint2'
 'lxsession'
-'rxvt-unicode-truecolor-wide-glyphs'
 'xclip'
 'scrot'
 'mpc'
