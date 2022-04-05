@@ -116,6 +116,7 @@ flatpak install flathub io.github.celluloid_player.Celluloid
 
 flatpak install flathub org.onlyoffice.desktopeditors
 
+flatpak install flathub com.github.wwmm.pulseeffects
 
 
 echo -e "\nINSTALLING AUR SOFTWARE\n"
