@@ -176,7 +176,6 @@ PKGS=(
 'playerctl'
 'spicetify-cli'
 'geany'
-'nerd-fonts-complete-mono-glyphs'
 'spotify'
 'web-greeter'
 'appimagelauncher'
@@ -224,7 +223,7 @@ for PKG in "${PKGS[@]}"; do
     yay -S --noconfirm $PKG
 done
 
-pacman -U https://archive.archlinux.org/repos/2021/08/29/community/os/x86_64/rofi-1.6.1-1-x86_64.pkg.tar.zst
+
 
 npm install -g @genzyy/anime-cli
 
@@ -240,12 +239,13 @@ cd leafpad
 ./configure
 make
 make install-strip
+cd ~
 
 git clone https://github.com/smsriharsha/Openbox_Dotfiles.git
 rsync -avxHAXP --exclude '.git*' --exclude 'LICENSE' --exclude '*.md' $HOME/Openbox_Dotfiles/dotfiles/. ~/
 
 
-
+cd $HOME/.icons
 tar -xJf $HOME/.icons/Papirus-Custom.tar.xz
 tar -xJf $HOME/.icons/Papirus-Dark-Custom.tar.xz
 tar -xvf $HOME/.icons/capitaine-cursors.tar.gz
@@ -254,6 +254,7 @@ sudo ln -vs $HOME/.icons/Papirus-Dark-Custom /usr/share/icons/
 sudo ln -vs $HOME/.icons/capitaine-cursors /usr/share/icons/
 
 ln -vs $HOME/.kitty-themes/themes/crusedo.conf $HOME/.config/kitty/theme.conf
+cd ~
 
 # export PATH=$PATH:~/.local/bin
 # cp -r $HOME/OpenboxInstall/dotfiles/* $HOME/.config/
