@@ -215,9 +215,6 @@ for PKG in "${PKGS[@]}"; do
 done
 
 
-
-npm install -g @genzyy/anime-cli
-
 cd ~
 wget https://github.com/JezerM/web-greeter/archive/refs/tags/3.4.0.tar.gz
 tar -xvf 3.4.0.tar.gz
@@ -266,6 +263,8 @@ cd ~
 git clone https://github.com/smsriharsha/LightdmTheme.git
 cp -r $HOME/LightdmTheme /usr/share/web-greeter/themes/
 
+npm install -g @genzyy/anime-cli
+
 flatpak install flathub io.github.celluloid_player.Celluloid
 
 flatpak install flathub org.onlyoffice.desktopeditors
@@ -281,8 +280,6 @@ git clone --depth 1 https://github.com/zsh-users/zsh-completions.git ${ZSH_CUSTO
 echo "-------------------------------------------------"
 echo "          Installing flatpak Packages         "
 echo "-------------------------------------------------"
-
-
 
 else
 export PATH=$PATH:~/.local/bin
