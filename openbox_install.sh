@@ -261,9 +261,9 @@ cd ~
 
 
 git clone https://github.com/smsriharsha/LightdmTheme.git
-cp -r $HOME/LightdmTheme /usr/share/web-greeter/themes/
+sudo cp -r $HOME/LightdmTheme /usr/share/web-greeter/themes/
 
-npm install -g @genzyy/anime-cli
+sudo npm install -g @genzyy/anime-cli
 
 flatpak install flathub io.github.celluloid_player.Celluloid
 
