@@ -98,6 +98,7 @@ Dual monitor supported.
 
 ## Screenshot of resource usage
 
+![2022-04-02-231741_1920x1080_scrot](https://user-images.githubusercontent.com/23277835/161954742-1d0c2298-8133-4b7c-b1e9-f612a59e568e.png)
 
 
 ## Steps to Install.
