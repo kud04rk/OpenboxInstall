@@ -265,6 +265,9 @@ cd ~
 git clone https://github.com/smsriharsha/LightdmTheme.git
 sudo cp -r $HOME/LightdmTheme /usr/share/web-greeter/themes/
 
+sudo rm -r $HOME/.oh-my-zsh/
+sudo rm .zshrc
+
 sudo npm install -g @genzyy/anime-cli
 
 flatpak install flathub io.github.celluloid_player.Celluloid
@@ -275,9 +278,6 @@ flatpak install flathub com.github.wwmm.pulseeffects
 
 sudo pacman -S zsh && chsh -s $(command -v zsh) --noconfirm --needed
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone --depth 1 https://github.com/zsh-users/zsh-completions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
 
 echo "-------------------------------------------------"
 echo "          Installing flatpak Packages         "
