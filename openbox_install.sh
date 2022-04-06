@@ -108,16 +108,6 @@ done
 
 
 
-echo "-------------------------------------------------"
-echo "          Installing flatpak Packages         "
-echo "-------------------------------------------------"
-
-flatpak install flathub io.github.celluloid_player.Celluloid
-
-flatpak install flathub org.onlyoffice.desktopeditors
-
-flatpak install flathub com.github.wwmm.pulseeffects
-
 
 echo -e "\nINSTALLING AUR SOFTWARE\n"
 # You can solve users running this script as root with this and then doing the same for the next for statement. However I will leave this up to you.
@@ -269,6 +259,16 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone --depth 1 https://github.com/zsh-users/zsh-completions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
+
+echo "-------------------------------------------------"
+echo "          Installing flatpak Packages         "
+echo "-------------------------------------------------"
+
+flatpak install flathub io.github.celluloid_player.Celluloid
+
+flatpak install flathub org.onlyoffice.desktopeditors
+
+flatpak install flathub com.github.wwmm.pulseeffects
 
 else
 export PATH=$PATH:~/.local/bin
