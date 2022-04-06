@@ -181,6 +181,7 @@ PKGS=(
 'appimagelauncher'
 'lxappreance-obconf'
 'downgrade'
+'auto-cpufreq'
 'timeshift-bin'
 'timeshift-autosnap'
 #'lightdm-webkit-theme-osmos'

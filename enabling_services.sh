@@ -65,18 +65,15 @@ else
 echo "tap to click not enabled"
 fi
 
+echo " Please enter your username"
+read usern
+
+cp /home/${usern}/.auto_cpufreq/auto_cpufreq.conf /etc/
+
+
 chmod a+wr /opt/spotify
 chmod a+wr /opt/spotify/Apps -R
 
-cp -r $HOME/.spicetify/Dribbblish $HOME/.config/spicetify/Themes/
-cd "$(dirname "$(spicetify -c)")/Themes/Dribbblish"
-mkdir -p ../../Extensions
-cp dribbblish.js ../../Extensions/.
-spicetify config extensions dribbblish.js
-spicetify config current_theme Dribbblish color_scheme mechanical
-spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
-spicetify backup apply
-cd ~
 
 sed -i 's/^#greeter-session=example-gtk-gnome/greeter-session=web-greeter/' /etc/lightdm/lightdm.conf
 sed -i 's/^#user-session=default/user-session=openbox/' /etc/lightdm/lightdm.conf
