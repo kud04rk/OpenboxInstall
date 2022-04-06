@@ -26,7 +26,8 @@ I have creditted all the creators in the code and in this readme file.
 
 <details>
   <summary><strong>Audio</strong></summary>
-  - Currently the script uses pulse audio. Pipe will be implemented in the near future.
+  - Currently the script uses pulse audio. Pipewire will be implemented in the near future.
+  - Pulse effects are also installe as a flatpak for cusotmization
   - Spotify is used as the default Music player
   
 </details>
