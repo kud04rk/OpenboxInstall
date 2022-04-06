@@ -116,7 +116,7 @@ echo "CLONING: YAY"
 cd ~
 git clone "https://aur.archlinux.org/yay.git"
 cd ${HOME}/yay
-sudo makepkg -si --noconfirm
+makepkg -si --noconfirm
 cd ~
 PKGS=(
 'autojump'
