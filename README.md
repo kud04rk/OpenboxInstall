@@ -122,7 +122,7 @@ chmod 777 openbox_install.sh enabling_services.sh
 
 Run the openbox_install script
 ```
-sudo ./openbox_install.sh
+./openbox_install.sh
 ```
 
 switch to root
