@@ -116,7 +116,7 @@ echo "CLONING: YAY"
 cd ~
 git clone "https://aur.archlinux.org/yay.git"
 cd ${HOME}/yay
-makepkg -si --noconfirm
+sudo makepkg -si --noconfirm
 cd ~
 PKGS=(
 'autojump'
@@ -229,10 +229,24 @@ git clone https://github.com/smsriharsha/leafpad.git
 cd leafpad
 ./configure
 make
-make install-strip
+sudo make install-strip
 cd ~
 
+cd ~
+git clone https://github.com/smsriharsha/Openbox_Dotfiles.git
+rsync -avxHAXP --exclude '.git*' --exclude 'LICENSE' --exclude '*.md' $HOME/Openbox_Dotfiles/dotfiles/. ~/
 
+cd $HOME/.icons
+tar -xJf $HOME/.icons/Papirus-Custom.tar.xz
+tar -xJf $HOME/.icons/Papirus-Dark-Custom.tar.xz
+tar -xvf $HOME/.icons/capitaine-cursors.tar.gz
+sudo ln -vs $HOME/.icons/Papirus-Custom /usr/share/icons/
+sudo ln -vs $HOME/.icons/Papirus-Dark-Custom /usr/share/icons/
+sudo ln -vs $HOME/.icons/capitaine-cursors /usr/share/icons/
+
+
+ln -vs $HOME/.kitty-themes/themes/crusedo.conf $HOME/.config/kitty/theme.conf
+cd ~
 
 
 # export PATH=$PATH:~/.local/bin
@@ -252,9 +266,13 @@ cd ~
 git clone https://github.com/smsriharsha/LightdmTheme.git
 cp -r $HOME/LightdmTheme /usr/share/web-greeter/themes/
 
+flatpak install flathub io.github.celluloid_player.Celluloid
 
+flatpak install flathub org.onlyoffice.desktopeditors
 
-pacman -S zsh && chsh -s $(command -v zsh) --noconfirm --needed
+flatpak install flathub com.github.wwmm.pulseeffects
+
+sudo pacman -S zsh && chsh -s $(command -v zsh) --noconfirm --needed
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -264,11 +282,7 @@ echo "-------------------------------------------------"
 echo "          Installing flatpak Packages         "
 echo "-------------------------------------------------"
 
-flatpak install flathub io.github.celluloid_player.Celluloid
 
-flatpak install flathub org.onlyoffice.desktopeditors
-
-flatpak install flathub com.github.wwmm.pulseeffects
 
 else
 export PATH=$PATH:~/.local/bin
