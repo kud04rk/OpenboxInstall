@@ -122,7 +122,7 @@ chmod 777 openbox_install.sh enabling_services.sh
 
 Run the openbox_install script
 ```
-./openbox_install.sh
+sudo ./openbox_install.sh
 ```
 
 switch to root
@@ -134,7 +134,7 @@ sudo -s
 switch back to user and run
 ```
 sudo -s
-./spotify_theme.sh
+./theme_config.sh
 ```
 # Known Problems
 Webgreeter at the time of Writing this doc has a few probelms and not getting installed properly.
