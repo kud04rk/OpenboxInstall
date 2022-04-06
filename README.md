@@ -10,7 +10,8 @@ The GUI is from JOYFUL desktop .
 This uses various other git projects in the scipt to build the desktop.
  ## Screenshot
  
-![5_6188198762796549223](https://user-images.githubusercontent.com/23277835/159973528-02b36055-c773-4690-a218-1f4df88c753f.png)
+![opnebox](https://user-images.githubusercontent.com/23277835/161943850-7bb9e00c-730a-4477-b0a2-81ba1d226383.gif)
+
 
 
 ## Resource Usage
