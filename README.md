@@ -149,6 +149,8 @@ Also does not work on the current version in AUR.
 Look at my dependecy list to figure of which version works for smb client or any others.
 https://github.com/smsriharsha/Openbox_Dotfiles/blob/main/dependencies_versions.txt
 
+### Permission denied:
+Change the permisions of all the scritps in the dotfiles.
 
 # Credits:
 This is hands down my favourite dot files package.
