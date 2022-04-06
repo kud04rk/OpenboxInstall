@@ -45,6 +45,13 @@ I have creditted all the creators in the code and in this readme file.
 </details>
 
 <details>
+  <summary><strong>Backups</strong></summary>
+  - Timeshift backups are enabled by default and accesible from grub
+  - snapper is also installed but not configured. can be used if you so choose.
+  
+</details>
+
+<details>
   <summary><strong>Gaming</strong></summary>
   - Preinstalled steam,lutris and mangohud
   
