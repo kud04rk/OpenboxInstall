@@ -77,7 +77,7 @@ chmod a+wr /opt/spotify/Apps -R
 
 sed -i 's/^#greeter-session=example-gtk-gnome/greeter-session=web-greeter/' /etc/lightdm/lightdm.conf
 sed -i 's/^#user-session=default/user-session=openbox/' /etc/lightdm/lightdm.conf
-sed -i 's/^theme: gruvbox/theme: LightdmTheme/' /etc/lightdm/web-greeter.yml
+sed -i 's/^    theme: gruvbox/    theme: LightdmTheme/' /etc/lightdm/web-greeter.yml
 
 
 echo "Enter the size of zram(MB)"
