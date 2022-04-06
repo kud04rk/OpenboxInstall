@@ -1,3 +1,6 @@
+
+rsync -avxHAXP --exclude '.git*' --exclude 'LICENSE' --exclude '*.md' $HOME/Openbox_Dotfiles/dotfiles/. ~/
+
 cp -r $HOME/.spicetify/Dribbblish $HOME/.config/spicetify/Themes/
 cd "$(dirname "$(spicetify -c)")/Themes/Dribbblish"
 mkdir -p ../../Extensions

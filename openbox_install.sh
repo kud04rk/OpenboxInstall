@@ -233,6 +233,8 @@ cd ~
 git clone https://github.com/smsriharsha/Openbox_Dotfiles.git
 rsync -avxHAXP --exclude '.git*' --exclude 'LICENSE' --exclude '*.md' $HOME/Openbox_Dotfiles/dotfiles/. ~/
 
+
+
 cd $HOME/.icons
 tar -xJf $HOME/.icons/Papirus-Custom.tar.xz
 tar -xJf $HOME/.icons/Papirus-Dark-Custom.tar.xz
