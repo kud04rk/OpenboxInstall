@@ -81,20 +81,20 @@ Install the base system of arch from
 https://github.com/smsriharsha/ArchBaseInstall.git
 
 ## Minimum Requirements & Resource Usage
-My test System Specs
-CPU: Dual core intel i5 5300u
-Memory: 12gb ram
-SSD: 64gb.
-GPU: Integrated
-Display : 1920x1080(required)
+### My test System Specs
+- CPU: Dual core intel i5 5300u
+- Memory: 12gb ram
+- SSD: 64gb.
+- GPU: Integrated
+- Display : 1920x1080(required)
 
-Minimum Requirements (My estimate)
-CPU: Dual Code intel i5 4th gen or above
-Memmory : 2gb (min)/ 4gb remommended
-SSD: 64 GB minimum(256 gb remommended)
-GPU: NA
-Display : 1376x768 or 1920x1080 required
-Dual monitor supported.
+### Minimum Requirements (My estimate)
+- CPU: Dual Code intel i5 4th gen or above
+- Memmory : 2gb (min)/ 4gb remommended
+- SSD: 64 GB minimum(256 gb remommended)
+- GPU: NA
+- Display : 1376x768 or 1920x1080 required
+- Dual monitor supported.
 
 ## Screenshot of resource usage
 
