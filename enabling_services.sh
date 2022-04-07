@@ -90,7 +90,8 @@ systemctl enable grub-btrfs.path
 systemctl enable zramd.service
 systemctl enable lightdm.service
 systemctl enable cronie.service
-systemctl enable mpd.service
+systemctl enable preload.service
+
 grub-mkconfig -o /boot/grub/grub.cfg
 
 

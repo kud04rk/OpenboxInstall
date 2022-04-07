@@ -161,6 +161,7 @@ PKGS=(
 'lxappreance-obconf'
 'downgrade'
 'auto-cpufreq'
+'preload'
 'timeshift-bin'
 'timeshift-autosnap'
 #'lightdm-webkit-theme-osmos'
@@ -254,8 +255,6 @@ sudo rm -r $HOME/.oh-my-zsh/
 sudo rm .zshrc
 
 sudo npm install -g @genzyy/anime-cli
-
-flatpak install flathub io.github.celluloid_player.Celluloid
 
 flatpak install flathub org.onlyoffice.desktopeditors
 
