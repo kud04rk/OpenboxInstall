@@ -137,9 +137,12 @@ exit
 ./theme_config.sh
 ```
 # Known Problems
-Webgreeter at the time of Writing this doc has a few probelms and not getting installed properly.
+- Webgreeter at the time of Writing this doc has a few probelms and not getting installed properly.
 
-Visit the official git repo for support.(it will work after dependies are correctly istalled).
+- Visit the official git repo for support.(it will work after dependies are correctly istalled).
+
+- spotify theme needs to be enabled after the first login. run the commands related spicetify after spotify login
+
 
 ### My solution:
 install it using yay once and also from git repo using git clone once. then it will work.
