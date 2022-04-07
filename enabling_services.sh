@@ -91,7 +91,6 @@ systemctl enable zramd.service
 systemctl enable lightdm.service
 systemctl enable cronie.service
 systemctl enable preload.service
-
 grub-mkconfig -o /boot/grub/grub.cfg
 
 

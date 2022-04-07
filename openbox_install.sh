@@ -25,6 +25,10 @@ PKGS=(
 'xterm'
 'alsa-plugins' # audio plugins
 'alsa-utils' # audio utils
+'ark' # compression
+'bluedevil'
+'breeze'
+'breeze-gtk'
 'bridge-utils'
 'code' # Visual Studio code
 'dtc'
@@ -45,25 +49,36 @@ PKGS=(
 'haveged'
 'jdk-openjdk' # Java 17
 'kitty'
+'layer-shell-qt'
 'libdvdcss'
 'lsof'
 'lutris'
 'lzop'
 'm4'
+'milou'
 'ntfs-3g'
+'okular'
 'openbsd-netcat'
+'oxygen'
 'p7zip'
 'patch'
 'pkgconf'
+'powerdevil'
 'powerline-fonts'
+'print-manager'
 'pulseaudio'
 'pulseaudio-alsa'
 'pulseaudio-bluetooth'
+'python-notify2'
+'python-psutil'
+'python-pyqt5'
 'python-pip'
 'qemu'
 'snapper'
+'spectacle'
 'steam'
 'swtpm'
+'synergy'
 'terminus-font'
 'ufw'
 'usbutils'
@@ -74,6 +89,7 @@ PKGS=(
 'wine-mono'
 'winetricks'
 'xdg-user-dirs'
+'zeroconf-ioslave'
 'xfce4-power-manager'
 'inkscape'
 'nm-applet'
@@ -107,6 +123,7 @@ PKGS=(
 'brave-bin' # Brave Browser
 'dxvk-bin' # DXVK DirectX to Vulcan
 'github-desktop-bin' # Github Desktop sync
+'ocs-url' # install packages from websites
 'snap-pac'
 'zramd'
 'python'
@@ -183,6 +200,10 @@ if [[ ${themeinstall} =~ "saber" ]]; then
 echo "installing addital packages for themes"
 PKGS=(
 'awesome-terminal-fonts'
+'lightly-git'
+'lightlyshaders-git'
+'mangohud' # Gaming FPS Counter
+'mangohud-common'
 'snapper-gui-git'
 'ttf-droid'
 'ttf-hack'
@@ -249,6 +270,8 @@ sudo rm -r $HOME/.oh-my-zsh/
 sudo rm .zshrc
 
 sudo npm install -g @genzyy/anime-cli
+
+flatpak install flathub io.github.celluloid_player.Celluloid
 
 flatpak install flathub org.onlyoffice.desktopeditors
 
