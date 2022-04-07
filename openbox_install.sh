@@ -55,7 +55,6 @@ PKGS=(
 'p7zip'
 'patch'
 'pkgconf'
-'powerdevil'
 'powerline-fonts'
 'pulseaudio'
 'pulseaudio-alsa'
