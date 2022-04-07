@@ -59,6 +59,7 @@ PKGS=(
 'ntfs-3g'
 'okular'
 'openbsd-netcat'
+'discover'
 'oxygen'
 'p7zip'
 'patch'
