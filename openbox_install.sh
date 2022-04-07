@@ -108,7 +108,6 @@ PKGS=(
 'brave-bin' # Brave Browser
 'dxvk-bin' # DXVK DirectX to Vulcan
 'github-desktop-bin' # Github Desktop sync
-'ocs-url' # install packages from websites
 'snap-pac'
 'zramd'
 'python'
