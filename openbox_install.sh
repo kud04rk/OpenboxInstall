@@ -26,9 +26,6 @@ PKGS=(
 'alsa-plugins' # audio plugins
 'alsa-utils' # audio utils
 'ark' # compression
-'bluedevil'
-'breeze'
-'breeze-gtk'
 'bridge-utils'
 'code' # Visual Studio code
 'dtc'
@@ -49,17 +46,13 @@ PKGS=(
 'haveged'
 'jdk-openjdk' # Java 17
 'kitty'
-'layer-shell-qt'
 'libdvdcss'
 'lsof'
 'lutris'
 'lzop'
 'm4'
-'milou'
 'ntfs-3g'
-'okular'
 'openbsd-netcat'
-'oxygen'
 'p7zip'
 'patch'
 'pkgconf'
@@ -69,16 +62,12 @@ PKGS=(
 'pulseaudio'
 'pulseaudio-alsa'
 'pulseaudio-bluetooth'
-'python-notify2'
-'python-psutil'
-'python-pyqt5'
 'python-pip'
 'qemu'
 'snapper'
 'spectacle'
 'steam'
 'swtpm'
-'synergy'
 'terminus-font'
 'ufw'
 'usbutils'
@@ -199,10 +188,6 @@ if [[ ${themeinstall} =~ "saber" ]]; then
 echo "installing addital packages for themes"
 PKGS=(
 'awesome-terminal-fonts'
-'lightly-git'
-'lightlyshaders-git'
-'mangohud' # Gaming FPS Counter
-'mangohud-common'
 'snapper-gui-git'
 'ttf-droid'
 'ttf-hack'
