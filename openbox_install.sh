@@ -25,7 +25,6 @@ PKGS=(
 'xterm'
 'alsa-plugins' # audio plugins
 'alsa-utils' # audio utils
-'ark' # compression
 'bridge-utils'
 'code' # Visual Studio code
 'dtc'
@@ -58,14 +57,12 @@ PKGS=(
 'pkgconf'
 'powerdevil'
 'powerline-fonts'
-'print-manager'
 'pulseaudio'
 'pulseaudio-alsa'
 'pulseaudio-bluetooth'
 'python-pip'
 'qemu'
 'snapper'
-'spectacle'
 'steam'
 'swtpm'
 'terminus-font'
@@ -78,7 +75,6 @@ PKGS=(
 'wine-mono'
 'winetricks'
 'xdg-user-dirs'
-'zeroconf-ioslave'
 'xfce4-power-manager'
 'inkscape'
 'nm-applet'
