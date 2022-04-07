@@ -152,7 +152,7 @@ PKGS=(
 'spotify'
 'web-greeter'
 'appimagelauncher'
-'lxappreance-obconf'
+'lxappearance-obconf'
 'downgrade'
 'auto-cpufreq'
 'preload'
