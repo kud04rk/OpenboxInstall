@@ -1,3 +1,15 @@
+
+# This is a branch with no KDE packages
+This is **not recommended** if you are going for the exact look in my screen shots.
+
+
+Less packages and bloat, but requires more customization in ZSHRC and also fonts,cursors and themes.
+
+Regular Install with KDE Packages vs without:
+- CPU: No obversable change
+- RAM: 30 to 50 MB reduction.
+- Packages: 1124 vs 927
+
 # OpenboxInstall
 This is a simple customizable script to install a new style of desktop enviroment rather your KDEs and Gnomes....
 
