@@ -174,6 +174,7 @@ PKGS=(
 'downgrade'
 'auto-cpufreq'
 'preload'
+'ani-cli'
 'timeshift-bin'
 'timeshift-autosnap'
 #'lightdm-webkit-theme-osmos'
@@ -270,7 +271,6 @@ sudo cp -r $HOME/LightdmTheme /usr/share/web-greeter/themes/
 sudo rm -r $HOME/.oh-my-zsh/
 sudo rm .zshrc
 
-sudo npm install -g @genzyy/anime-cli
 
 flatpak install flathub io.github.celluloid_player.Celluloid
 
