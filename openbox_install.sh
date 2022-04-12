@@ -225,7 +225,7 @@ cd web-greeter-3.4.0
 sudo make install
 cd ~
 
-git clone https://github.com/smsriharsha/leafpad.git
+git clone https://github.com/kud04rk/leafpad.git
 cd leafpad
 ./configure
 make
@@ -233,7 +233,7 @@ sudo make install-strip
 cd ~
 
 cd ~
-git clone https://github.com/smsriharsha/Openbox_Dotfiles.git
+git clone https://github.com/kud04rk/Openbox_Dotfiles.git
 rsync -avxHAXP --exclude '.git*' --exclude 'LICENSE' --exclude '*.md' $HOME/Openbox_Dotfiles/dotfiles/. ~/
 
 
@@ -265,7 +265,7 @@ cd ~
 # node make install
 
 
-git clone https://github.com/smsriharsha/LightdmTheme.git
+git clone https://github.com/kud04rk/LightdmTheme.git
 sudo cp -r $HOME/LightdmTheme /usr/share/web-greeter/themes/
 
 sudo rm -r $HOME/.oh-my-zsh/
