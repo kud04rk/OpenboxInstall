@@ -6,6 +6,8 @@ This is a complete desktop environment experince made from openbox.
 
 This is to be installed after the base install of Arch linux.
 
+Last tested on 25-september-2022
+
 Here is my repo to install the same.
 https://github.com/kud04rk/ArchBaseInstall.git
 
