@@ -158,7 +158,7 @@ exit
 
 - Visit the official git repo for support.(it will work after dependies are correctly istalled).
 
-- spotify theme needs to be enabled after the first login. run the commands related spicetify after spotify login
+- spotify theme needs to be enabled after the first login sometimes. run the ./theme_config.sh after the first login.
 
 ### My solution:
 
@@ -173,6 +173,24 @@ https://github.com/kud04rk/Openbox_Dotfiles/blob/main/dependencies_versions.txt
 ### Permission denied:
 
 Change the permisions of all the scritps in the dotfiles.
+
+# Notes:
+ - Wallpapers can be found in .wallapers. You can link this folder to where ever you like.
+
+# Shortcuts
+
+## Window management shortcuts
+
+https://github.com/kud04rk/Openbox_Dotfiles/blob/main/openbox%20shortcuts.md
+
+## Terminal shortcuts (kitty)
+
+https://github.com/kud04rk/Openbox_Dotfiles/blob/main/kitty%20shortcuts.md
+
+## FileManager shortcuts
+
+https://github.com/kud04rk/Openbox_Dotfiles/blob/main/Thunar%20shortcuts.md
+
 
 # Credits:
 
