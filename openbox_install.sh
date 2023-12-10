@@ -206,7 +206,6 @@ echo "installing addital packages for themes"
 PKGS=(
 'awesome-terminal-fonts'
 'lightly-git'
-'lightlyshaders-git'
 'mangohud' # Gaming FPS Counter
 'mangohud-common'
 'snapper-gui-git'
