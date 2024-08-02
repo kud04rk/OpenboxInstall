@@ -32,7 +32,6 @@ PKGS=(
 'bridge-utils'
 'code' # Visual Studio code
 'dtc'
-'egl-wayland'
 'exfat-utils'
 'extra-cmake-modules'
 'flex'
@@ -49,10 +48,8 @@ PKGS=(
 'haveged'
 'jdk-openjdk' # Java 17
 'kitty'
-'layer-shell-qt'
 'libdvdcss'
 'lsof'
-'lutris'
 'lzop'
 'm4'
 'milou'
@@ -70,9 +67,6 @@ PKGS=(
 'pulseaudio'
 'pulseaudio-alsa'
 'pulseaudio-bluetooth'
-# 'pipewire'
-# 'pipewire-alsa'
-# 'pipewire-pulse'
 'python-notify2'
 'python-psutil'
 'python-pyqt5'
@@ -82,7 +76,6 @@ PKGS=(
 'spectacle'
 'steam'
 'swtpm'
-'synergy'
 'terminus-font'
 'ufw'
 'usbutils'
@@ -204,11 +197,6 @@ read themeinstall
 if [[ ${themeinstall} =~ "saber" ]]; then
 echo "installing addital packages for themes"
 PKGS=(
-'awesome-terminal-fonts'
-'lightly-git'
-'mangohud' # Gaming FPS Counter
-'mangohud-common'
-'snapper-gui-git'
 'ttf-droid'
 'ttf-hack'
 'ttf-meslo' # Nerdfont package
