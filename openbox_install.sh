@@ -38,7 +38,6 @@ PKGS=(
 'fuse2'
 'fuse3'
 'fuseiso'
-'gamemode'
 'gcc'
 'gimp' # Photo editing
 'gparted' # partition management
@@ -111,7 +110,7 @@ echo -e "\nINSTALLING AUR SOFTWARE\n"
 
 echo "CLONING: YAY"
 cd ~
-git clone "https://aur.archlinux.org/yay.git"
+git clone "https://github.com/Jguer/yay.git"
 cd ${HOME}/yay
 makepkg -si --noconfirm
 cd ~
@@ -208,12 +207,12 @@ for PKG in "${PKGS[@]}"; do
 done
 
 
-cd ~
-wget https://github.com/JezerM/web-greeter/archive/refs/tags/3.4.0.tar.gz
-tar -xvf 3.4.0.tar.gz
-cd web-greeter-3.4.0
-sudo make install
-cd ~
+# cd ~
+# wget https://github.com/JezerM/web-greeter/archive/refs/tags/3.4.0.tar.gz
+# tar -xvf 3.4.0.tar.gz
+# cd web-greeter-3.4.0
+# sudo make install
+# cd ~
 
 git clone https://github.com/kud04rk/leafpad.git
 cd leafpad
