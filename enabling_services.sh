@@ -17,6 +17,7 @@ if lspci | grep -E "NVIDIA|GeForce"; then
     	nvidia-xconfig
 fi
 pacman -S grub-btrfs --noconfirm --needed
+pacman -S inotify-tools # btrfs dep
 # umount /.snapshots/
 # rm -rf /.snapshots/
 # snapper -c root create-config /
@@ -85,8 +86,8 @@ echo "YOU CAN EDIT THIS LATER AT /etc/default/zramd"
 read zram
 sed -i 's/^# MAX_SIZE=8192/MAX_SIZE='"${zram}"'/' /etc/default/zramd
 
-systemctl start grub-btrfs.path
-systemctl enable grub-btrfs.path
+systemctl enable grub-btrfsd.service
+systemctl start grub-brtfsd.service
 systemctl enable zramd.service
 systemctl enable lightdm.service
 systemctl enable cronie.service

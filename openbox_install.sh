@@ -95,6 +95,7 @@ PKGS=(
 'gvfs-nfs'
 'npm'
 'flatpak'
+'base-devel'
 )
 #installing additional packages
 for PKG in "${PKGS[@]}"; do
@@ -110,7 +111,7 @@ echo -e "\nINSTALLING AUR SOFTWARE\n"
 
 echo "CLONING: YAY"
 cd ~
-git clone "https://github.com/Jguer/yay.git"
+git clone "https://aur.archlinux.org/yay.git"
 cd ${HOME}/yay
 makepkg -si --noconfirm
 cd ~
