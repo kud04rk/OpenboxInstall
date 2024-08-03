@@ -173,6 +173,7 @@ PKGS=(
 'ani-cli'
 'timeshift-bin'
 'timeshift-autosnap'
+'blueman'
 #'lightdm-webkit-theme-osmos'
 )
 
