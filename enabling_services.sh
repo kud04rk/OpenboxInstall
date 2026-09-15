@@ -46,7 +46,9 @@ pacman -S inotify-tools # btrfs dep
 # fi
 
 
-# cp -r $HOME/OpenboxInstall/LightdmTheme /usr/share/lightdm-webkit/themes/
+# LightDM: use slick-greeter with openbox session
+sed -i 's/^#greeter-session=example-gtk-gnome/greeter-session=lightdm-slick-greeter/' /etc/lightdm/lightdm.conf
+sed -i 's/^#user-session=default/user-session=openbox/' /etc/lightdm/lightdm.conf
 
 echo " Do you want to enable tap to click on the laptop"
 echo "taptoclick/no"
@@ -72,14 +74,8 @@ read usern
 cp /home/${usern}/.auto_cpufreq/auto_cpufreq.conf /etc/
 
 
-chmod a+wr /opt/spotify
-chmod a+wr /opt/spotify/Apps -R
-
-
-sed -i 's/^#greeter-session=example-gtk-gnome/greeter-session=web-greeter/' /etc/lightdm/lightdm.conf
-sed -i 's/^#user-session=default/user-session=openbox/' /etc/lightdm/lightdm.conf
-sed -i 's/^    theme: gruvbox/    theme: LightdmTheme/' /etc/lightdm/web-greeter.yml
-
+# chmod a+wr /opt/spotify
+# chmod a+wr /opt/spotify/Apps -R
 
 echo "Enter the size of zram(MB)"
 echo "YOU CAN EDIT THIS LATER AT /etc/default/zramd"
@@ -87,11 +83,12 @@ read zram
 sed -i 's/^# MAX_SIZE=8192/MAX_SIZE='"${zram}"'/' /etc/default/zramd
 
 systemctl enable grub-btrfsd.service
-systemctl start grub-brtfsd.service
+systemctl start grub-btrfsd.service
 systemctl enable zramd.service
 systemctl enable lightdm.service
 systemctl enable cronie.service
 systemctl enable preload.service
+systemctl enable bluetooth.service
 grub-mkconfig -o /boot/grub/grub.cfg
 
 

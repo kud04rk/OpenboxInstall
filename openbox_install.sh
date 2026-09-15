@@ -27,6 +27,8 @@ PKGS=(
 'alsa-utils' # audio utils
 'ark' # compression
 'bluedevil'
+'bluez' # Bluetooth protocol stack
+'bluez-utils' # Bluetooth utilities
 'breeze'
 'breeze-gtk'
 'bridge-utils'
@@ -90,6 +92,7 @@ PKGS=(
 'inkscape'
 'nm-applet'
 'lightdm'
+'lightdm-slick-greeter' # LightDM greeter in use (slick-greeter)
 'gvfs'
 'gvfs-smb'
 'gvfs-nfs'
@@ -164,7 +167,6 @@ PKGS=(
 'spicetify-cli'
 'geany'
 'spotify'
-'web-greeter'
 'appimagelauncher'
 'lxappearance-obconf'
 'downgrade'
@@ -173,8 +175,9 @@ PKGS=(
 'ani-cli'
 'timeshift-bin'
 'timeshift-autosnap'
-'blueman'
-#'lightdm-webkit-theme-osmos'
+'blueman' # Bluetooth Manager + Bluetooth Adapters GUI
+'stacer-bin' # Stacer system optimizer and monitor
+'rustdesk-bin' # RustDesk remote desktop
 )
 
 for PKG in "${PKGS[@]}"; do
@@ -209,13 +212,6 @@ for PKG in "${PKGS[@]}"; do
 done
 
 
-# cd ~
-# wget https://github.com/JezerM/web-greeter/archive/refs/tags/3.4.0.tar.gz
-# tar -xvf 3.4.0.tar.gz
-# cd web-greeter-3.4.0
-# sudo make install
-# cd ~
-
 git clone https://github.com/kud04rk/leafpad.git
 cd leafpad
 ./configure
@@ -246,24 +242,15 @@ cd ~
 # cp -r $HOME/OpenboxInstall/dotfiles/* $HOME/.config/
 #
 
-# nody greeter for lightdm theme
-
-# git clone https://github.com/JezerM/nody-greeter.git
-# cd nody-greeter
-# npm install
-# npm run rebuild
-# npm run build
-# node make install
-
-
-git clone https://github.com/kud04rk/LightdmTheme.git
-sudo cp -r $HOME/LightdmTheme /usr/share/web-greeter/themes/
-
 sudo rm -r $HOME/.oh-my-zsh/
 sudo rm .zshrc
 
 
 flatpak install flathub io.github.celluloid_player.Celluloid
+
+flatpak install flathub io.github.nozwock.Packet
+
+flatpak install flathub org.mozilla.firefox
 
 flatpak install flathub org.onlyoffice.desktopeditors
 
